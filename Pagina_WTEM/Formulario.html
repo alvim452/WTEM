@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste formulário empresa  WTEM </title>
+</head>
+<body>
+
+    <section id="Formulario">
+        <article id="noticia-principal">
+
+           <header id="cabecalho-noticia">
+               <hgroup>
+                 <h3> Fale connosco > Contacto</h3>
+                 <h1> Formulario de contacto</h1>
+                 <h2> Por Álvaro Rocha</h2>
+                 <h3 class="direita"> Actualizado em Maio 2020</h3>
+              </hgroup>
+           </header>
+    
+
+    <form method="POST" action="mailto:ALVARO.ROCHA@wtem-energias.com.pt">
+
+    <fieldset id="utilizador"><legend> Identificação do utilizador</legend>
+      <p> <label for="cNome"> Nome </label><input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo"></p> 
+      <fieldset id="sexo"><legend>Género</legend> 
+        <p><input type="radio" name="tSexo" id="cMasc"><label for=""><label for="cMasc">Sr.</label></p> <br>
+        <p><input type="radio" name="tSexo" id="cFem"><label for="cFem">Sra.</label> </p>
+      </fieldset> 
+      <p><label for="cNasc">Data de Nascimento</label><input type="date" name="tNasc" id="cNasc" placeholder="dd/mm/yyyy"></p>  
+      </fieldset>
+
+    <fieldset><legend>Morada</legend> 
+      <p><label for="cMor">rua </label><input type="text" name="tMor" id="cMor"></p> 
+      <p><label for="">Rua</label> <input type="text" name="tRua" id="cRua"size="30"maxlength="40" placeholder="Av.-Rua-Travessa-logradouro"></p>
+      <p><label for="cNum">Numero</label>  <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
+      <p><label for="cAnd">Andar</label><input type="text" name="tAnd" id="cAnd"></p>
+      <p><label for="cPort">Porta</label><input type="text" name="tPort" id="cPort"></p>
+      <p><label for="cLocal">localidade</label><input type="text" name="tLocal" id="cLocal"></p> 
+      <p><label for="cConc"></label> Concelho <input type="text" name="tConc" id="cConc"></p> 
+      <p><label for="cCp"></label> Codigo Postal <input type="number" name="4Cp" id="cCp" size="4" maxlength="4"><input type="number" name="3Cp" id="cCp" size="3"maxlength="3"> <input type="text" name="" id="cCp"></p> 
+       </fieldset>
+
+     <fieldset><legend>Contactos</legend> 
+      <p><label for="cTelm"></label> Telemovel <input type="tel" name="tTelm" id="cTelm" size="9" placeholder="Telemovel para contacto"></p>  
+      <p>Telefone fixo <input type="telf" name="tTelcTelf" id="9" placeholder="Telefone para contacto"></p>  
+      <p><label for="cMail">Mail</label>  <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Digite o seu E-mail"></p> 
+     </fieldset> 
+
+    <fieldset><legend>Horario para ser contactado</legend> </fieldset> 
+      <fieldset>Deixe aqui a sua mensagem ou pedido de informação
+      <p><label for="cMsg"></label>  <textarea name="tMsg" id="cMsg" cols="30" rows="10" placeholder="Digite aqui o seu texto"></textarea></p>
+
+      <p> Submeter</p>
+       [AQUI ENTRA UMA IMAGEM]
+    </fieldset> 
+    </form>
+    
+    <p> Sera contactado o mais rapidamente posivel</p>
+</article>
+</section>
+</body>
+</html>
