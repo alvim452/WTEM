@@ -4,16 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste formulário empresa  WTEM </title>
+    <link rel="stylesheet" type="text/css" href="_css/estilo_wtem.css"> 
+    <link rel="stylesheet" type="text/css" href="_css/form.css">
 </head>
 <body>
+  <div id="interface">           
 
-    <section id="Formulario">
+    <header id="cabeçalho">       
+    <hgroup>                           
+    <h1>Google Glass</h1> 
+    <h2>A revolução do Google está chegando</h2>
+    </hgroup>
+
+     <img id="icone" src="_imagens\glass-oculos-preto-peq.png"> 
+    <nav id="menu">               
+        <h1>Menu Principal </h1>
+        <ul>                  
+               <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="index.html">Home</a></li> 
+               <li onmouseover="mudaFoto('_imagens/especificacoes.png')" onmouseout="mudaFoto('_imagens/contato.png')" > <a href="specs.html"> Especificações</a></li>
+               <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fotos.html"> Fotos</a></li>
+               <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="multimidia.html"> Multimídia</a></li> 
+               <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a href="fale-conosco.html">Fale conosco</a> </li> 
+        </ul>
+    </nav>
+    </header>
+
+    <section id="corpo-full">
         <article id="noticia-principal">
 
            <header id="cabecalho-noticia">
                <hgroup>
                  <h3> Fale connosco > Contacto</h3>
-                 <h1> Formulario de contacto</h1>
+                 <h1> Formulário de contacto</h1>
                  <h2> Por Álvaro Rocha</h2>
                  <h3 class="direita"> Actualizado em Maio 2020</h3>
               </hgroup>
@@ -23,7 +45,7 @@
     <form method="POST" action="mailto:ALVARO.ROCHA@wtem-energias.com.pt">
 
     <fieldset id="utilizador"><legend> Identificação do utilizador</legend>
-      <p> <label for="cNome"> Nome </label><input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Nome Completo"></p> 
+      <p> <label for="cNome"> Nome </label><input type="text" name="tNome" id="cNome" size="20" maxlength="40" placeholder="Primeiro e último nome"></p> 
       <fieldset id="sexo"><legend>Género</legend> 
         <p><input type="radio" name="tSexo" id="cMasc"><label for=""><label for="cMasc">Sr.</label></p> <br>
         <p><input type="radio" name="tSexo" id="cFem"><label for="cFem">Sra.</label> </p>
@@ -31,34 +53,68 @@
       <p><label for="cNasc">Data de Nascimento</label><input type="date" name="tNasc" id="cNasc" placeholder="dd/mm/yyyy"></p>  
       </fieldset>
 
-    <fieldset><legend>Morada</legend> 
-      <p><label for="cMor">rua </label><input type="text" name="tMor" id="cMor"></p> 
+    <fieldset><legend>Morada </legend> 
       <p><label for="">Rua</label> <input type="text" name="tRua" id="cRua"size="30"maxlength="40" placeholder="Av.-Rua-Travessa-logradouro"></p>
-      <p><label for="cNum">Numero</label>  <input type="number" name="tNum" id="cNum" min="0" max="99999"></p>
-      <p><label for="cAnd">Andar</label><input type="text" name="tAnd" id="cAnd"></p>
-      <p><label for="cPort">Porta</label><input type="text" name="tPort" id="cPort"></p>
-      <p><label for="cLocal">localidade</label><input type="text" name="tLocal" id="cLocal"></p> 
+      <p><label for="cNum">Numero</label>  <input type="text" name="tNum" id="cNum" size="3" min="0" max="99999"></p>
+      <p><label for="cAnd">Andar</label><input type="text" name="tAnd" id="cAnd" size="3"></p>
+      <p><label for="cPort">Porta</label><input type="text" name="tPort" id="cPort" size="3"></p>
+      <p><label for="cLocal">Localidade</label><input type="text" name="tLocal" id="cLocal"></p> 
       <p><label for="cConc"></label> Concelho <input type="text" name="tConc" id="cConc"></p> 
-      <p><label for="cCp"></label> Codigo Postal <input type="number" name="4Cp" id="cCp" size="4" maxlength="4"><input type="number" name="3Cp" id="cCp" size="3"maxlength="3"> <input type="text" name="" id="cCp"></p> 
+      <p><label for="cCp"></label> Codigo Postal <input type="text" name="4Cp" id="cCp" size="2" maxlength="4"><input type="text" name="3Cp" id="cCp" size="2"maxlength="3"> <input type="text" name="" id="cCp" size="10"></p> 
        </fieldset>
 
      <fieldset><legend>Contactos</legend> 
-      <p><label for="cTelm"></label> Telemovel <input type="tel" name="tTelm" id="cTelm" size="9" placeholder="Telemovel para contacto"></p>  
-      <p>Telefone fixo <input type="telf" name="tTelcTelf" id="9" placeholder="Telefone para contacto"></p>  
+      <p><label for="cTelm"></label> Telemovel <input type="tel" name="tTelm" id="cTelm" size="9" ></p>  
+      <p>Telefone fixo <input type="telf" name="tTelcTelf" id="9" ></p>  
       <p><label for="cMail">Mail</label>  <input type="email" name="tMail" id="cMail" size="20" maxlength="40" placeholder="Digite o seu E-mail"></p> 
      </fieldset> 
 
-    <fieldset><legend>Horario para ser contactado</legend> </fieldset> 
-      <fieldset>Deixe aqui a sua mensagem ou pedido de informação
-      <p><label for="cMsg"></label>  <textarea name="tMsg" id="cMsg" cols="30" rows="10" placeholder="Digite aqui o seu texto"></textarea></p>
+    <fieldset><legend>Dia e Hora para ser contactado</legend> 
 
-      <p> Submeter</p>
-       [AQUI ENTRA UMA IMAGEM]
+      <p><label for="cDs">Dia da semana:</label></p>
+      <select name="tDs" id="cDs">
+      <p><optgroup label="Dia da semana:"></p>
+        <option value="2">Segunda- Feira</option>
+        <option value="3">Terça-Feira</option>
+        <option value="4">Quarta-Feira</option>
+        <option value="5">Quinta-Feira</option>
+        <option value="6">Sexta-Feira</option>
+        <option value="fs">Durante o Fim de semana</option>
+      </optgroup> 
+      </select>
+
+    <p><label for="cHor">Horário:</label></p>
+    <select name="tHor" id="cHor">
+     <p><optgroup label="Horário:"></p>
+       <option value="m1">8h00-10h00</option>
+       <option value="m2">10h00-12h00</option>
+       <option value="t1">14h00-16h00</option>
+       <option value="t2">16h00-18h00</option>
+       <option value="pl">Pós-Laboral</option>
+    </optgroup>
+    </select>
+
+   </fieldset>
+
+      <fieldset><legend>Deixe aqui o seu comentário ou pedido de informação:</legend> 
+        <p><label for="cMsg">Mensagem:</label> </p>
+      <p><label for="cMsg"></label>  <textarea name="tMsg" id="cMsg" cols="30" rows="10" placeholder="Digite aqui o seu texto"></textarea></p>
     </fieldset> 
-    </form>
+
+      <p><legend>Submeter</legend> </p>
+      <input type="image" src="_imagens/botao-enviar.png"  name="tImagem" alt="Botão enviar">
+       <h3> Será contactado o mais brevemente posivel</h3>
+       <h4>Obrigado</h4>
+       <input id="logo" type="image" src="_imagens/logo6_wtem.png">
     
-    <p> Sera contactado o mais rapidamente posivel</p>
+    </form>
 </article>
 </section>
+
+<footer id="rodape">  
+  <p> Copyright &copy;2020 - by Álvaro Rocha <br/> <a href="http://www.wtem-energias.com.pt/index.html" target="blanck">Facebook
+  </a> | <a href="http://twiter.com/cursosemvideo" target="blanck">Twitter</a> </p>  
+</footer>
+
 </body>
 </html>

@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap'); /*link com a fonte personalizavel que fomos buscar ao googl.fonts.com*/
+@font-face{  /* vamos criar uma fonte persolanizada de letras*/
+   font-family: "FonteLogo"; /* nome que atribuimos a nossa fonte personalizavel*/
+   src: url("../_fonts/bubblegum-sans-regular.otf"); /* origem da pastaa onde se encontra a nossa fonte persolalizada*/
+}
+
+body {
+    font-family: Arial, sans-serif;
+     background-color:#dddddd; /* cor de fundo*/
+     color:rgba(0, 0, 0, 1) ; /* cor das letras*/
+ }
+ div#interface{ /* formatar div#interface*/
+    width: 900px;/* Largura da div fiva com uma largura de 800px*/
+    background-color: #ffffff; /* cor fundo interface*/
+    margin: -20px auto 0px auto; /* formatação autoamatica margens esq e dta*/
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);/*criar sombra volta objecto div*/
+    padding: 10px 10px 10px 10px;/* espaço interno do objecto para que o texto não fique colado ás margens; os valores são todos iguais posso colocar só padding:10px;*/
+ }
+ 
+ p {   /* formatação de todos os paragrafos*/
+ text-align: justify;  /*texto justificado direita e esquerda*/
+    text-indent: 50px; /*inicio de cada paragrafo 50 px á direita*/
+ }
+ a {
+    color: #606060;
+    text-decoration: none;
+ }
+ a:hover{
+    text-decoration: underline;
+ }
+ 
+
+
+
+
+
+
+
+ /* FORMATAÇÃO DO MENU*/
+ nav#menu{ /* sempre que nav tenhaum id colcamosum #*/
+    display: block; /*mostrar o menú como um bloco unico*/
+ }
+
+ nav#menu ul{
+    list-style:none; /*retirar as bolinhas (marcadores)*/
+    text-transform:uppercase;/* letras para maiusculas*/
+    position: absolute;/* posição livre dentro do site e fora do container (container=menú)*/
+    top: -20px;/* o zero 0 é o topo da pagina logo como eu quero abaixo do topo coloco um valor negativo*/
+    left: 300px;
+ }
+nav#menu li{
+   display:inline-block;/* um bloco seja exibido na mesma linha*/
+   background-color:#dddddd; /* fundo cor cinzenta*/
+   padding: 10px;/* criar espaço dentro das caixas*/
+   margin: 2px; /* espaço fora do objecto(caixas)*/
+   transition: background-collor 1s; /* duração do efeito de transição*/
+}
+nav#menu li :hover{
+   background-color: #606060;/*efeito qd passar rato por cima os itens da lista fiacm  cinzentos mais escuros*/
+}
+nav#menu h1{
+   display: none;/* esconder a frase MENU PRINCIPAL(h1)*/
+}
+nav#menu a { /* todo o nav que tenha um id menu e que tenha ancora (a)*/
+   color: black; /* a cor das letras passa +para preto*/
+   text-decoration: none; /* deixa de ter qualquer efeito, neste caso o sublinhado*/
+}
+ nav#menu a:hover{ /* todo nav com o id menu que tenha link (a-ancora) e efeito hover passar rato por cima*/
+    color: white; /* vou mudar a cor da letra*/
+    text-decoration: underline; /* o texto fique sublinhado*/
+ }
+
+
+
+
+
+
+
+
+
+
+ footer#rodape{
+    clear: both;/* para limpar os floats dos dois blocos  do section e do aside*/
+    border-top: 1px solid #606060; /* vou criar uma borda ou moldura no cimo do bloco rodape*/
+ }
+ footer#rodape p{
+    text-align: center; /* vou alinhar ao centro da pagina, o texto do rodape ou footer*/
+ }
+ 
